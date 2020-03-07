@@ -1,0 +1,46 @@
+{% extends 'layout.html.twig' %}
+
+{% block stylesheet %}
+    <link rel="stylesheet" href="/assets/css/form.css">
+    <link rel="stylesheet" href="/assets/css/shop.css">
+{% endblock %}
+
+{% block content %}
+ <!--<div class="container mt-4">
+    <div class="card" style="width: 18rem;">
+        <img src="https://s1.medias-norauto.fr/images_produits/650x650/2133815.jpg" class="card-img-top" alt="scooter">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+ </div>-->
+    <div class="container">
+        <div class="row">
+            {% for scooter in results %}
+                <div class="col-lg-4 col-md-6 mb-5">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <a href="#"><img class="card-img-top" src="https://5.imimg.com/data5/CW/ED/JN/SELLER-10979414/vespa-lml-star-stella-scooter-spare-parts-500x500.jpg" alt="lml"></a>
+                            <h4 class="card-title">
+                                <a href="#">{{ scooter.name }}</a>
+                            </h4>
+                            <p class="card-text">Modèle: {{ scooter.model }}</p>
+                            <p class="card-text">Prix: {{ scooter.price }}€</p>
+                            <p class="card-text">Couleur: {{ scooter.color }}</p>
+                            <p class="card-text">Km: {{ scooter.km }}</p>
+                            <p class="card-text">Cylindre: {{ scooter.cylinder }} cm&#xB3;</p>
+                            <p class="card-text">Moteur: {% if scooter.engine == 0 %}Auto{% else  %}{{ scooter.engine }}T{% endif %}</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-dark">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                        </div>
+                    </div>
+                </div>
+            {% else %}
+                <p>Pas de résultats</p>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

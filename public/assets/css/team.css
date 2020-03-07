@@ -1,0 +1,112 @@
+@font-face {
+    font-family: "Rochester Twee";
+    src: url("../font/Rochester Twee.ttf");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:active {
+    color: red;
+}
+
+.banner {
+    padding-block-start: 163px;
+}
+
+
+img.search {
+    width: 50px;
+    height: 50px;
+    margin-left: 5px;
+    filter: invert(100%);
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #292929;
+    color: #ffffff;
+    font-family: "Rochester Twee";
+    src: url("../font/Rochester Twee.ttf");
+    font-size: 25px;
+}
+
+footer {
+    font-size: 15px;
+}
+
+
+
+
+.blog-home{
+    text-align: justify;
+}
+
+
+.nav-menu a:hover {
+    color: #007bff;
+    opacity: 0.9;
+}
+.navbar{
+    background-color: #292929 !important;
+    position: relative;
+    border-radius: 2px solid red;
+    border-radius: 5px;
+}
+
+.navbar-toggler{
+    background-color: #eee347;
+}
+.bg-light {
+    background-color: #292929;
+    color: #ffffff;
+
+}
+
+header {
+    background: #292929;
+    color: #ffffff;
+    margin: auto;
+    opacity: .84;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    padding: 12px;
+    z-index: 9;
+    box-shadow: inset -9px 13px 7px 20px;
+    background-color: #007bff;
+    color: #292929;
+}
+
+.navbar-light .navbar-nav .nav-link  {
+    color: white;
+    font-size: 20px;
+}
+ml-auto nav-item active a {
+    color: white;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #eee347;
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+    color: white;
+}
+
+hr{
+    border-top: 1px solid rgba(255, 255, 255, 1);
+}
+
+
+

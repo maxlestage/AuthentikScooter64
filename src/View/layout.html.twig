@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://kit.fontawesome.com/a54c212624.js"></script>
+
+        <title>{% block title %}{% endblock %}</title>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="/assets/css/main.css">
+        <link rel="stylesheet" href="/assets/css/header.css">
+        <link rel="stylesheet" href="/assets/css/footer.css">
+        <link rel="stylesheet" href="/assets/css/search.css">
+        {% block stylesheet %}{% endblock %}
+        <link rel="icon" href="/assets/images/fav.ico">
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="/home/index">
+                    <img src="/assets/images/fav.ico" width="100" height="100" class="d-inline-block align-top" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0 w-100">
+                        <li class=" ml-auto nav-item active">
+                            <a class="nav-link" href="/home/index" title="Home">Accueil <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="ml-auto nav-item">
+                            <a class="nav-link" href="/piaggio/index" title="ESPACE SCOOTERS Piaggio">Piaggio</a>
+                        </li>
+                        <li class=" ml-auto nav-item">
+                            <a class="nav-link" href="/lml/index" title="ESPACE SCOOTERS LML">LML</a>
+                        </li>
+                        <li class=" ml-auto nav-item">
+                            <a class="nav-link" href="/shop/index" title="Shop">Shop</a>
+                        </li>
+                        <li class=" ml-auto nav-item">
+                            <a class="nav-link" href="/team/index" title="ESPACE SCOOTERS A2R TEAM & SPONSORING">A2R TEAM & SPONSORING</a>
+                        </li>
+                        <li class="ml-auto form-inline my-2 my-lg-0">
+                            <form method="post"action="/recherche/index" >
+                                <input type="text" id="site-search" name="q"
+                                       aria-label="Search through site content">
+                                {#                            <img class="search" src="/assets/images/logo.png">#}
+{#                                <input type="submit" value="Chercher">#}
+                                <button type="submit"><img class="search" src="https://svgsilh.com/svg/309532.svg"></button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+
+        <div style="max-width:1440px;margin:auto;">
+                {% block content %}{% endblock %}
+            </div>
+        <footer>
+
+            <!-- Footer -->
+            <footer class="page-footer font-small blue-grey lighten-5">
+
+
+
+                        <!-- Grid row-->
+                        <div class="row py-4 d-flex align-items-center">
+
+                            <!-- Grid column -->
+                            <div class="col-md-6 col-lg-7 text-center text-md-right">
+
+                                <!-- Facebook -->
+                                <a class="fb-ic"  href="https://fr-fr.facebook.com/authentik.scooter">
+
+                                </a>
+                                <!--Instagram-->
+                                <a class="ins-ic" href="https://www.instagram.com/authentik_scooter/">
+
+                                </a>
+
+                            </div>
+                            <!-- Grid column -->
+
+                        </div>
+                        <!-- Grid row-->
+
+
+                <!-- Footer Links -->
+                <div class="container text-center text-md-left mt-5">
+
+                    <!-- Grid row -->
+                    <div class="row mt-3 dark-grey-text">
+
+                        <!-- Grid column -->
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                            <!-- Links -->
+                            <h6 class="text-uppercase font-weight-bold">NOS MARQUES</h6>
+                            <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                            <p>
+                                <a class="dark-grey-text" href="/piaggio/index">Piaggio</a>
+                            </p>
+                            <p>
+                                <a class="dark-grey-text" href="/lml/index">LML</a>
+                            </p>
+
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                            <!-- Links -->
+                            <h6 class="text-uppercase font-weight-bold">Liens utiles</h6>
+                            <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                            <p>
+                                <a class="dark-grey-text" href="https://authentikracingteam.blog4ever.com">Authentik Racing Team</a>
+                            </p>
+                            <p>
+                                <a  href="/shop/index" target="_blank" alt="Contact" title="ESPACE FORMULAIRE CONTACT">Le shop</a>
+                            </p>
+                            <p>
+                                <a  href="/formulaire/index" target="_blank" alt="Contact" title="ESPACE FORMULAIRE CONTACT">Une question?</a>
+                            </p>
+
+                        </div>
+
+                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                            <!-- Links -->
+                            <h6 class="text-uppercase font-weight-bold"> <a href="/maps/index">NOTRE ENTREPRISE</a></h6>
+                            <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                            <p>
+                                <i class="fas fa-home mr-3"></i>Zone Artisanale Maignon 8 allée Didier DAURAT, 64600 Anglet.</p>
+                            <p>
+                                <i class="fas fa-envelope mr-3"></i>contact@authentikscooter.fr</p>
+                            <p>
+                                <i class="fas fa-phone mr-3"></i>Tél: 05 59 58 05 68</p>
+                        </div>
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+                            <!-- Links -->
+                            <h6 class="text-uppercase font-weight-bold">Qui nous aime, nous suive !</h6>
+                            <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                            <p>
+                                <i class="fab-ic"></i >
+                                <a class="fab fa-facebook-f white-text mr-5" href="https://fr-fr.facebook.com/authentik.scooter" target="_top"></a >
+                                </i>Authentik Scooter
+                            </p>
+                            <p>
+                                <i class="ins-ic"></i >
+                                <a class="fab fa-instagram white-text mr-5" href="https://www.instagram.com/authentik_scooter/" target="_blank"></a >
+                                </i>@authentik_scooter
+                            </p>
+                        </div>
+                    <!-- Grid row -->
+
+                </div>
+                <!-- Footer Links -->
+
+                <!-- Copyright -->
+                <div class="footer-copyright text-center py-3">
+                    <a> Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved <i  aria-hidden="true"></i> by Max LESTAGE</a>
+                </div>
+                <!-- Copyright -->
+
+            </footer>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        {% block javascript %}{% endblock %}
+    </body>
+</html>

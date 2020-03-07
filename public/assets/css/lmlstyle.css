@@ -1,0 +1,356 @@
+/* We're working with the body tag, and so with the WHOLE page */
+
+@font-face {
+    font-family: "Rochester Twee";
+    src: url("../font/Rochester Twee.ttf");
+}
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #ffffff;
+    color: #39424e;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+}
+
+
+
+/* Header */
+
+header  {
+    opacity: 0.9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background: #ffffff;
+    z-index: 9;
+    box-shadow: 2px 2px 10px 2px;
+}
+
+.brand-logo {
+    width: 50px;
+}
+
+.brand-logo img {
+    width: 60%;
+}
+/* pourleburgermenu debut */
+.nav-menu {
+    display: none; /* do not display in mobile view */
+}
+
+#menu-accordeon {
+    padding:0;
+    margin:0;
+    list-style:none;
+    text-align: right;
+    width: 180px;
+}
+#menu-accordeon ul {
+    padding:0;
+    margin:0;
+    list-style:none;
+    text-align: match-parent;
+}
+#menu-accordeon li {
+    background-color: red;
+    background-image:-webkit-linear-gradient(top, red 0%, #ffffff 100%);
+    background-image: linear-gradient(to bottom, #ffffff 0%, #ffffff 100%);
+    border-radius: 6px;
+    margin-bottom:2px;
+    box-shadow: 3px 3px 3px #ffffff;
+    border:solid 1px #ffffff
+}
+#menu-accordeon li li {
+    max-height:0;
+    overflow: hidden;
+    transition: all .2s;
+    border-radius:0;
+    background: #ffffff;
+    box-shadow: none;
+    border:none;
+    margin:0
+}
+#menu-accordeon a {
+    display:block;
+    text-decoration: none;
+    color: #292929;
+    padding: 3px 0;
+    font-family: verdana;
+    font-size:1em
+}
+#menu-accordeon ul li a, #menu-accordeon li:hover li a {
+    font-size:0.7em
+}
+#menu-accordeon li:hover {
+    background: #ffffff
+}
+#menu-accordeon li li:hover {
+    background: #ffffff;
+}
+#menu-accordeon ul li:last-child {
+    border-radius: 0 0 6px 6px;
+    border:none;
+}
+#menu-accordeon li:hover li {
+    max-height: 15em;
+}
+
+.nav-icon {
+    margin: 1em;
+    width: 40px;
+}
+
+.nav-icon:after,
+.nav-icon:before,
+.nav-icon div {
+    background-color: #ffffff;
+    border-radius: 3px;
+    content: '';
+    display: block;
+    height: 5px;
+    margin: 7px 0;
+    transition: all .2s ease-in-out;
+}
+
+.nav-icon:hover:before {
+    transform: translateY(12px) rotate(135deg);
+}
+
+.nav-icon:hover:after {
+    transform: translateY(-12px) rotate(-135deg);
+}
+
+.nav-icon:hover div {
+    transform: scale(0);
+}
+/* burgermenu fin */
+
+/* Banner  ---------- */
+
+.banner {
+    position: relative;
+    text-align: center;
+}
+
+.banner img {
+    width: 100%;
+    opacity: 0.7;
+}
+
+.banner-tag {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 80%;
+    border-radius: 15px;
+    padding: 10px;
+    background: #ed6c6d;
+    color: #292929;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 1.3em;
+}
+
+
+.info{
+    width: 60%;
+}
+
+
+a {
+    color: #292929;
+    text-decoration: none;
+}
+
+
+
+
+/* iPads  ----------- */
+@media screen  and ( min-width: 768px){
+    body {
+        font-size: 15px;
+    }
+
+    .banner-tag {
+        font-size: 1.6em;
+    }
+}
+
+/* Desktop -----------*/
+@media screen and (min-width: 1024px) {
+    body {
+        font-size: 32px;
+    }
+
+    .brand-logo {
+        width: 124.42px;
+    }
+
+    nav {
+        width: 70%;
+    }
+
+    .nav-menu {
+        display: flex;
+        justify-content: space-around;
+        margin: 0;
+        padding: 10px;
+        list-style: none;
+    }
+
+    .nav-menu a {
+        text-decoration: none;
+        font-size: 1.125em;
+        font-weight: 700;
+        color: #292929;
+    }
+
+    .nav-menu a:hover {
+        color: red;
+        opacity: 0.9;
+    }
+
+    .nav-burger {
+        display: none;/* Do not display in Desktop */
+    }
+
+    .banner-tag {
+        font-size: 1.75em;
+    }
+}
+
+
+
+body {
+    font-family: Rochester Twee;
+    background-color:#ffffff;/* The page background will be black */
+    color: white; /* The page text will be white */
+}
+
+.page_principal {
+    padding-top:1px;
+    display: flex; /* or inline-flex */
+    width:100%;
+    padding-bottom:4px;
+    justify-content: center;
+}
+.title {
+    display: flex;
+    /*font-size: 40px; /* Titres de 40 pixels */
+    justify-content: center;
+    width:100%;
+    height:100%;
+    flex-direction: row;
+
+}
+
+h1 {
+    /* Utilisera MaSuperFonte-Bold.ttf */
+    font-style: normal;
+    font-weight: oblique;
+    font-size: 3vw;
+    flex-basis: auto;
+}
+
+.imagebanner {
+    width:100%;
+}
+.banner {
+    flex-grow: 0; /* default 0 */
+    width:100%;
+    height:100%;
+    flex-direction: row;
+}
+
+.image0 {
+    width:60%;
+    height:60%;
+    filter: invert(0);
+    flex-direction: center;
+}
+
+.bloc0 {
+    flex-grow: 0; /* default 0 */
+    width:100%;
+    height:100%;
+    flex-direction: row;
+
+
+}
+
+.bloc0:hover {
+    opacity: 0.8;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+
+.image1 {
+    width:100%;
+}
+
+.bloc1 {
+    flex-grow: 0; /* default 0 */
+    width:100%;
+    height:100%;
+    flex-direction: row;
+}
+
+.bloc1:hover {
+    opacity: 0.8;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+.image2 {
+    width:100%;
+}
+
+.bloc2 {
+    flex-grow: 0; /* default 0 */
+    width:100%;
+    height:100%;
+    flex-direction: row;
+}
+
+.bloc2:hover {
+    opacity: 0.8;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+.image3 {
+    width:100%;
+}
+
+.bloc3 {
+    flex-grow: 0; /* default 0 */
+    width:100%;
+    height:100%;
+    flex-direction: row;
+}
+
+
+.bloc3:hover {
+    opacity: 0.8;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+.image4 {
+    width:100%;
+}
+
+.bloc4 {
+    flex-grow: 0; /* default 0 */
+    width:100%;
+    height:100%;
+    flex-direction: row;
+}
+.bloc4:hover {
+    opacity: 0.8;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}

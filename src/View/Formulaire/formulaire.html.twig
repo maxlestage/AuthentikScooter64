@@ -1,0 +1,51 @@
+{% extends 'layout.html.twig' %}
+
+{% block stylesheet %}
+    <link rel="stylesheet" href="/assets/css/form.css">
+{% endblock %}
+
+{% block content %}
+    <h2> Veuillez remplir le formulaire ci-dessous !</h2>
+
+    {% if message is not empty %}
+        <p class="info">{{ message }}</p>
+    {% endif %}
+<div class="form">
+    <form method="post">
+
+        <label for="nom"><strong>Nom<span style="color: #ff0000;">*</span> :</strong> </label>
+        <input id="nom" name="nom" size="28" type="text" class="w-100">
+
+        <label for="prenom"><strong>Prénom :</strong></label>
+        <input id="prenom" name="prenom" size="27" type="text"class="w-100">
+
+        <label for="adresse"><strong>Adresse : </strong></label>
+        <input id="adresse" name="adresse" size="81" type="text"class="w-100">
+
+        <label for="code"><strong>Code Postal :</strong></label>
+        <input id="code" name="code" size="13" type="number"class="w-100">
+
+        <label for="ville"><strong>Ville : </strong></label>
+        <input id="ville" name="ville" size="39" type="text"class="w-100">
+
+        <label for="telephone"><strong>Téléphone<span style="color: #ff0000;">*</span> :</strong></label>
+        <input id="telephone" name="telephone" size="27" type="text"class="w-100">
+
+        <label for="mail"><strong>Mail <span style="color: #ff0000;">*</span> : </strong></label>
+        <input id="mail" name="mail" type="text"class="w-100">
+
+        <label for="motif">Pour quelle raison nous contactez-vous ?</label>
+        <select id="motif" name="motif">
+            <option value="reglement">Objet</option>
+            <option value="Neuf">Neuf</option>
+            <option value="Occasion">Occasion</option>
+            <option value="Pieces_detachees">Pièces détachées</option>
+        </select>
+
+        <label for="message">Message <span style="color: #ff0000;">*</span> :</label>
+        <textarea id="message" cols="52" rows="7" name="message"></textarea>
+        <input type="submit" value="Envoyer" />
+    </form>
+
+</div>
+{% endblock %}

@@ -1,0 +1,78 @@
+<form method="post">
+    <input type="hidden" name="id" value="{{ scooter.id }}">
+    <div class="form-group">
+        <label for="validationTooltip02">MARQUE</label>
+        <div class="form-group">
+            <select class="custom-select" required name="marque_id">
+                <option value="">Choisissez une marque </option>
+                {% for marque in marques %}
+                    <option value="{{ marque.id }}" {% if scooter.marque_id == marque.id %}selected{% endif %}>{{ marque.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+    <div class="form-group">
+        <label for="validationTooltip02">MODEL</label>
+        <input type="text" class="form-control w-100" id="validationTooltip02" placeholder="Le model du véhicule"
+               value="{{ scooter.model }}" required name="model">
+        <div class="valid-tooltip"></div>
+    </div>
+
+    <div class="form-group">
+        <label for="validationTooltip03">COULEUR</label>
+        <input type="text" class="form-control w-100" id="validationTooltip03" placeholder="La couleur du véhicule"
+               value="{{ scooter.color }}" required name="color">
+        <div class="invalid-tooltip"></div>
+    </div>
+
+    <div class="form-group">
+        <label for="validationTooltip04">KILOMETRAGE</label>
+        <input type="number" class="form-control w-100" id="validationTooltip04" placeholder="Nombre de kilométre du véhicule"
+               value="{{ scooter.km  }}" required name="km">
+        <div class="invalid-tooltip"></div>
+    </div>
+
+    <div class="form-group">
+        <label for="validationTooltip05">PRIX</label>
+        <input type="text" class="form-control w-100" id="validationTooltip05" placeholder="le Prix en €uro du véhicule"
+               value="{{ scooter.price }}" required name="price">
+        <div class="invalid-tooltip"></div>
+    </div>
+
+    <div class="form-group">
+        <label for="validationTooltip05">CYLINDRE</label>
+        <div class="form-group">
+            <select class="custom-select" required name="cylinder">
+                <option value="">Choisissez la cylindré en cm³ du véhicule </option>
+                <option value="50" {% if scooter.cylinder == 50 %} selected {% endif %} >50 cm³</option>
+                <option value="125"{% if scooter.cylinder == 125 %} selected {% endif %} >125 cm³</option>
+                <option value="150"{% if scooter.cylinder == 150 %} selected {% endif %} >150 cm³</option>
+                <option value="200"{% if scooter.cylinder == 200 %} selected {% endif %} >200 cm³</option>
+                <option value="300"{% if scooter.cylinder == 300 %} selected {% endif %} >300 cm³</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="validationTooltip02">MOTEUR</label>
+        <div class="form-group">
+            <select class="custom-select" required name="engine">
+                <option value="">Choisissez un type de moteur </option>
+                <option value="0"{% if scooter.engine == 0 %} selected {% endif %} > Auto </option>
+                <option value="2"{% if scooter.engine == 2 %} selected {% endif %}>2 TEMPS</option>
+                <option value="4"{% if scooter.engine == 4 %} selected {% endif %}>4 TEMPS</option>
+            </select>
+        </div>
+    </div>
+        <button class="btn btn-primary" type="submit">Submit form</button>
+    </div>
+
+
+
+
+
+</form>
+
+
+
+

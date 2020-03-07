@@ -1,0 +1,9 @@
+{% extends 'layout_backoffice.html.twig' %}
+
+{% block content %}
+    <h1>Scoooter {{ scooter.marque_id }}</h1>
+    <p>{{ scooter.id }}. {{ scooter.marque_id }}</p>
+    <a href="/scooter/edit/{{ scooter.id }}">Edit</a>
+    <a href="/scooter/delete/{{scooter.id}}">Supprimer</a>
+    <a href="/scooter/index">Back</a>
+{% endblock %}

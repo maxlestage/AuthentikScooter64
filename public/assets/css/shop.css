@@ -1,0 +1,85 @@
+body {
+    color: #000000;
+    font-family: 'fantasy', sans-serif;
+}
+
+.my-4{
+    font-family: "Rochester Twee";
+}
+.my-4:hover {
+    color: #4CAF50;
+    opacity: 0.9;
+}
+
+.text-uppercase {
+    font-family: "Rochester Twee";
+}
+
+p {
+    font-family: "Rochester Twee";
+}
+
+.list-group{
+    font-family: "Rochester Twee";
+}
+
+.list-group a:hover{
+    color: #4CAF50;
+    opacity: 0.9;
+}
+
+.card-body p {
+    font-family: "Rochester Twee";
+}
+.card-body p:hover {
+    color: #4CAF50;
+    opacity: 0.9;
+}
+
+.card-img-top:hover {
+    opacity: 0.8;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+    cursor: pointer;
+}
+.card-title{
+    font-family: "Rochester Twee";
+}
+
+
+.card-text {
+    font-size: 20px;
+    font-family: "Al Bayan" ;
+    font-weight: bold;
+    color: black;
+}
+
+.card-title a:hover {
+    color: #4CAF50;
+    opacity: 0.9;
+}
+
+.card-footer {
+    background-color: #4CAF50;
+}
+
+.footer-copyright , a {
+    font-family: "Rochester Twee";
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+user agent stylesheet
+li {
+    text-align: -webkit-match-parent;
+}
+.navbar-nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}

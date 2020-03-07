@@ -1,0 +1,6 @@
+{% extends 'layout_backoffice.html.twig' %}
+
+{% block content %}
+    <h1>Ajouter un nouveau scooter : {{scooter.name}} {{ scooter.model }} {{ scooter.color }} {{ scooter.cylinder }}cm³ {{ scooter.engine}}t </h1>
+    {% include 'Scooter/_form.html.twig' %}
+{% endblock %}

@@ -1,0 +1,49 @@
+
+.text-uppercase font-weight-bold {
+
+    padding-block-start: 10px;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    padding-top: 200px;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+
+
+
+/* iPads  ----------- */
+@media screen and ( max-width: 300px){
+
+
+
+    body {
+        font-size: 15px;
+
+    }
+    .banner{
+        display: flex;
+    }
+
+
+    header {
+        position: relative;
+    }
+
+
+    .text-uppercase font-weight-bold {
+
+        padding-block-start: 10px;
+    }
+
+    .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+        padding-top: 200px;
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+        line-height: 1.2;
+
+
+
+
+
+    }

@@ -1,0 +1,185 @@
+@font-face {
+    font-family: "Rochester Twee";
+    src: url("../font/Rochester Twee.ttf");
+}
+
+* {
+    box-sizing: border-box;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #ffffff;
+    color: #39424e;
+    font-family: "Rochester Twee";
+    src: url("../font/Rochester Twee.ttf");
+    font-size: 25px;
+}
+
+.blog-home{
+    text-align: center;
+}
+
+body {
+    background-color:#ffffff;/* The page background will be black */
+    color: #292929; /* The page text will be white */
+}
+
+/* Header */
+header {
+    margin: auto;
+    opacity: 0.9;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    padding: 12px;
+    background: #ffffff;
+    z-index: 9;
+    box-shadow: 2px 2px 10px 2px;
+}
+
+footer {
+    font-size: 15px;
+}
+
+
+/* Banner  ---------- */
+
+img .banner {
+    padding-block-start: 10px;
+    position: relative;
+    text-align: center;
+}
+
+.banner img {
+    width: 100%;
+    opacity: 0.7;
+}
+
+.banner-tag {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 80%;
+    border-radius: 15px;
+    padding: 10px;
+    background: #ed6c6d;
+    color: #292929;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 1.3em;
+}
+
+.info{
+    width: 60%;
+}
+
+a {
+    color: #292929;
+    text-decoration: none;
+}
+
+/* iPads  ----------- */
+@media screen and ( max-width: 300px){
+    body {
+        font-size: 15px;
+
+    }
+.banner{
+    display: flex;
+}
+
+
+    header {
+        position: relative;
+    }
+
+}
+
+
+
+/* Desktop -----------*/
+@media screen and (min-width: 1025px) {
+    body {
+        font-size: 20px;
+    }
+}
+
+.page_principal {
+    justify-content: center;
+    padding-top:1px;
+    display: flex; /* or inline-flex */
+    width:100%;
+    padding-bottom:4px;
+    font-family: "Rochester Twee";
+    src: url("../font/Rochester Twee.ttf");
+}
+
+.title {
+    display: flex;
+    /*font-size: 40px; /* Titres de 40 pixels */
+    justify-content: center;
+    width:100%;
+    height:100%;
+    flex-direction: row;
+}
+
+h1 {
+    /* Utilisera MaSuperFonte-Bold.ttf */
+    font-style: oblique;
+    font-size: 2.5vw;
+    flex-basis: auto;
+}
+
+.imagebanner {
+    width:100%;
+}
+.banner {
+    padding-block-start: 180px;
+    flex-grow: 0; /* default 0 */
+    width:100%;
+    height:100%;
+    flex-direction: row;
+}
+
+.image0 {
+    width:60%;
+    height:60%;
+    filter: invert(0);
+    justify-content: center;
+}
+
+.bloc {
+    flex-grow: 0; /* default 0 */
+    width:100%;
+    height:100%;
+    flex-direction: row;
+}
+
+.bloc0 {
+    flex-grow: 0; /* default 0 */
+    width:100%;
+    height:100%;
+    flex-direction: row;
+}
+
+.bloc1 {
+    flex-grow: 0; /* default 0 */
+    width:100%;
+    height:100%;
+    flex-direction: row;
+}
+
+
+.bloc:hover {
+    opacity: 0.8;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+    cursor: pointer;
+}
+
+.w-100 {
+    width: 100%;
+}

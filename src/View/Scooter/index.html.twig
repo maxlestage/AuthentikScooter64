@@ -1,0 +1,42 @@
+{% extends 'layout_backoffice.html.twig' %}
+
+{% block content %}
+    <h1>Catalogue Scooter</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">Marque</th>
+                <th scope="col">Modèle</th>
+                <th scope="col">Couleur(s)</th>
+                <th scope="col">km</th>
+                <th scope="col">Prix</th>
+                <th scope="col">Cylindre</th>
+                <th scope="col">Moteur</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for scooter in scooters %}
+                <tr>
+                    <td scope="row">
+                        <a href="/scooter/edit/{{ scooter.id }}">{{ scooter.id}}</a>
+                    </td>
+                    <td>{{scooter.name}}</td>
+                    <td>{{ scooter.model }}</td>
+                    <td>{{ scooter.color }}</td>
+                    <td>{{ scooter.km }}</td>
+                    <td>{{ scooter.price }}</td>
+                    <td>{{ scooter.cylinder }}</td>
+                    <td>{% if scooter.engine == 0 %}
+                            Auto
+                        {% else %}
+                            {{ scooter.engine }}T
+                        {% endif %}</td>
+                </tr>
+            {% else %}
+                <li>Nothing to display</li>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/scooter/add">Ajouter</a>
+{% endblock %}

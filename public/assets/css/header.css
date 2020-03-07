@@ -1,0 +1,130 @@
+@font-face {
+    font-family: "Rochester Twee";
+    src: url("../font/Rochester Twee.ttf");
+}
+
+
+.brand-logo {
+    width: 50px;
+}
+
+.brand-logo img {
+    width: 80%;
+}
+/* pourleburgermenu debut */
+.nav-menu {
+    display: none; /* do not display in mobile view */
+}
+
+.navbar-collapse {
+    font-family: "Rochester Twee";
+    src: url(../font/Rochester Twee.ttf);
+
+}
+
+.dropdown li{position:relative;}
+ul.sub-menu ul { position:absolute;left:0;top:100%}
+
+.navbar-toggler{
+    font-size:25px;
+}
+
+
+navbar navbar-expand-lg {
+    margin: auto;
+    opacity: 0.9;
+    display: flex;
+    align-items: center;
+    left: 0;
+    right: 0;
+    padding: 12px;
+    background: #ffffff;
+    z-index: 9;
+    box-shadow: 2px 2px 10px 2px;
+}
+[type=button], [type=reset], [type=submit], button {
+    -webkit-appearance: media-volume-sliderthumb;
+}
+
+button {
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: buttontext;
+    background-color: transparent;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    text-align: center;
+    cursor: default;
+    font: 400 11px system-ui;
+}
+
+
+.navbar-light .navbar-nav .nav-link {
+    color: black;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: red;
+}
+
+.navbar-nav{
+    justify-content: space-around;
+}
+
+@media screen and (min-width: 1025px) {
+    body {
+        font-size: 20px;
+        justify-content: space-around;
+        font-family: "Rochester Twee";
+        src: url("../font/Rochester Twee.ttf");
+    }
+
+    .brand-logo {
+        width: 124.42px;
+    }
+
+    nav {
+        font-family: "Rochester Twee";
+        src: url("../font/Rochester Twee.ttf");
+        opacity: 0,9;
+        margin: auto;
+        width: 100%;
+
+    }
+
+    .nav-menu {
+        display: flex;
+        margin: 0;
+        padding: 10px;
+        list-style: none;
+    }
+
+    .nav-menu a {
+        text-decoration: none;
+        font-size: 1.125em;
+        font-weight: 700;
+        color: #292929;
+    }
+
+    .nav-menu a:hover {
+        color: red;
+        opacity: 0.9;
+    }
+
+    .nav-burger {
+        display: none;/* Do not display in Desktop */
+    }
+
+    .banner-tag {
+        font-size: 1.75em;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    nav {
+        width: 100%;
+    }
+}
